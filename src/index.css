@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Material Symbols */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Glass Effects */
+.glass-card {
+  background: rgba(15, 15, 15, 0.4);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-panel {
+  background: rgba(8, 8, 8, 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+/* Glow Effects */
+.red-glow {
+  box-shadow: 0 0 40px -5px rgba(225, 6, 0, 0.4);
+}
+
+.text-glow {
+  text-shadow: 0 0 15px rgba(225, 6, 0, 0.5);
+}
+
+.soft-glow {
+  box-shadow: 0 10px 30px -5px rgba(225, 6, 0, 0.08);
+}
+
+.red-glow-hover:hover {
+  box-shadow: 0 0 30px -15px rgba(225, 6, 0, 0.15);
+}
+
+.subtle-glow-hover:hover {
+  box-shadow: 0 0 20px 0px rgba(192, 5, 0, 0.1);
+  border-color: rgba(192, 5, 0, 0.3);
+}
+
+/* Text Gradients */
+.text-gradient-subtle {
+  background: linear-gradient(135deg, #ffffff 0%, #a0a0a0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-red-muted {
+  background: linear-gradient(135deg, #e10600 0%, #8e1208 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Hero Gradient */
+.hero-gradient {
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+}
+
+/* Kinetic Asymmetry */
+.kinetic-asymmetry {
+  clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
+}
+
+/* WhatsApp Float */
+.whatsapp-float {
+  box-shadow: 0 8px 30px rgba(37, 211, 102, 0.3);
+}
+
+/* Product Card Hover */
+.product-card-glow {
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s ease;
+}
+.product-card-glow:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 35px -10px rgba(225, 6, 0, 0.15), 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #000000; }
+::-webkit-scrollbar-thumb { background: #333; border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: #e10600; cursor: pointer; }
+
+/* Selection */
+::selection {
+  background-color: rgba(225, 6, 0, 0.4);
+  color: white;
+}

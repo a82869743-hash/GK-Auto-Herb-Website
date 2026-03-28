@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-bright": "#393939",
+              "surface-variant": "#353535",
+              "on-secondary": "#680200",
+              "on-tertiary": "#002a77",
+              "secondary": "#ffb4a8",
+              "on-tertiary-fixed": "#00174a",
+              "inverse-on-surface": "#303030",
+              "primary-fixed": "#ffdad4",
+              "inverse-primary": "#c00500",
+              "on-primary": "#680200",
+              "surface-container-low": "#1b1b1b",
+              "tertiary-fixed-dim": "#b4c5ff",
+              "secondary-fixed": "#ffdad4",
+              "surface-container-lowest": "#0e0e0e",
+              "surface-container": "#1f1f1f",
+              "tertiary-fixed": "#dbe1ff",
+              "on-secondary-fixed-variant": "#8e1208",
+              "on-primary-fixed": "#410100",
+              "on-tertiary-fixed-variant": "#003ea7",
+              "surface-tint": "#ffb4a8",
+              "on-secondary-container": "#ff9a8a",
+              "secondary-fixed-dim": "#ffb4a8",
+              "on-surface-variant": "#e9bcb5",
+              "error": "#ffb4ab",
+              "primary-fixed-dim": "#ffb4a8",
+              "tertiary": "#b4c5ff",
+              "surface-container-highest": "#353535",
+              "on-surface": "#e2e2e2",
+              "tertiary-container": "#0163ff",
+              "surface-container-high": "#2a2a2a",
+              "on-tertiary-container": "#f4f4ff",
+              "error-container": "#93000a",
+              "surface": "#131313",
+              "primary-container": "#e10600",
+              "on-secondary-fixed": "#410100",
+              "inverse-surface": "#e2e2e2",
+              "secondary-container": "#8e1208",
+              "on-error-container": "#ffdad6",
+              "on-primary-container": "#fff2f0",
+              "on-primary-fixed-variant": "#930300",
+              "background": "#131313",
+              "on-background": "#e2e2e2",
+              "primary": "#ffb4a8",
+              "on-error": "#690005",
+              "outline-variant": "#5e3f3a",
+              "surface-dim": "#131313",
+              "outline": "#af8781"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-card {
+        background: rgba(53, 53, 53, 0.2);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+      }
+      .red-glow-hover:hover {
+        box-shadow: 0 0 30px -15px rgba(225, 6, 0, 0.15);
+      }
+      .kinetic-asymmetry {
+        clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
+      }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-white">
+<!-- TopNavBar -->
+<nav class="sticky top-0 w-full z-50 bg-zinc-950/40 backdrop-blur-xl shadow-[0_20px_50px_-12px_rgba(0,0,0,0.5)]">
+<div class="flex justify-between items-center px-10 py-5 w-full max-w-screen-2xl mx-auto">
+<div class="text-2xl font-black tracking-tighter text-zinc-100 font-headline uppercase">GK AUTO HERB</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-zinc-400 font-medium hover:text-zinc-100 transition-all duration-300" href="#">Home</a>
+<a class="text-zinc-400 font-medium hover:text-zinc-100 transition-all duration-300" href="#">Services</a>
+<a class="text-zinc-100 border-b-2 border-primary-container/60 pb-1 font-bold" href="#">Packages</a>
+<a class="text-zinc-400 font-medium hover:text-zinc-100 transition-all duration-300" href="#">Gallery</a>
+<a class="text-zinc-400 font-medium hover:text-zinc-100 transition-all duration-300" href="#">About</a>
+<a class="text-zinc-400 font-medium hover:text-zinc-100 transition-all duration-300" href="#">Contact</a>
+</div>
+<div class="flex items-center space-x-6">
+<button class="text-zinc-400 hover:text-zinc-100 transition-colors">
+<span class="material-symbols-outlined" data-icon="chat">chat</span>
+</button>
+<button class="bg-gradient-to-br from-primary-container to-on-primary-fixed-variant text-white px-6 py-2 rounded-full font-bold text-sm tracking-tight hover:scale-105 active:scale-95 transition-all shadow-[0_10px_20px_-5px_rgba(225,6,0,0.25)]">
+                    Book Now
+                </button>
+</div>
+</div>
+</nav>
+<main class="min-h-screen">
+<!-- Hero Branding Section -->
+<section class="relative py-24 overflow-hidden">
+<div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary-container/5 to-transparent pointer-events-none"></div>
+<div class="max-w-screen-2xl mx-auto px-10 relative">
+<span class="text-primary-container/80 font-headline font-bold tracking-[0.3em] uppercase text-sm mb-4 block">Engineered Protection</span>
+<h1 class="text-6xl md:text-8xl font-headline font-black tracking-tighter uppercase leading-[0.9] mb-8 max-w-4xl">
+                    Performance <br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-on-surface to-zinc-600">Tier Systems</span>
+</h1>
+<p class="text-zinc-400 max-w-xl text-lg font-medium leading-relaxed border-l-2 border-primary-container/20 pl-6">
+                    Select the ultimate protection suite for your vehicle. From essential ceramic maintenance to full-track durability coatings.
+                </p>
+</div>
+</section>
+<!-- Pricing Grid -->
+<section class="max-w-screen-2xl mx-auto px-10 pb-32">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-end">
+<!-- Basic Package -->
+<div class="glass-card rounded-xl p-8 transition-all duration-500 group red-glow-hover border border-white/5 flex flex-col h-full">
+<div class="mb-8">
+<h3 class="text-zinc-500 font-headline font-bold uppercase tracking-widest text-xs mb-2">Essential</h3>
+<div class="text-3xl font-headline font-black text-on-surface mb-4">BASIC</div>
+<div class="flex items-baseline gap-1">
+<span class="text-4xl font-headline font-bold">$199</span>
+<span class="text-zinc-500 text-sm">/service</span>
+</div>
+</div>
+<ul class="space-y-4 mb-10 flex-grow">
+<li class="flex items-center gap-3 text-sm text-zinc-300">
+<span class="material-symbols-outlined text-zinc-500 text-lg" data-icon="check_circle">check_circle</span>
+                            Premium Hand Wash
+                        </li>
+<li class="flex items-center gap-3 text-sm text-zinc-300">
+<span class="material-symbols-outlined text-zinc-500 text-lg" data-icon="check_circle">check_circle</span>
+                            Iron Decontamination
+                        </li>
+<li class="flex items-center gap-3 text-sm text-zinc-300">
+<span class="material-symbols-outlined text-zinc-500 text-lg" data-icon="check_circle">check_circle</span>
+                            6-Month Spray Sealant
+                        </li>
+<li class="flex items-center gap-3 text-sm text-zinc-300">
+<span class="material-symbols-outlined text-zinc-500 text-lg" data-icon="check_circle">check_circle</span>
+                            Interior Vacuum &amp; Wipe
+                        </li>
+</ul>
+<button class="w-full py-4 rounded-lg bg-surface-container-high text-zinc-400 font-bold uppercase tracking-tighter text-sm hover:bg-zinc-100 hover:text-surface transition-all">Book Now</button>
+</div>
+<!-- Silver Package -->
+<div class="glass-card rounded-xl p-8 transition-all duration-500 group red-glow-hover border border-white/5 flex flex-col h-full">
+<div class="mb-8">
+<h3 class="text-zinc-500 font-headline font-bold uppercase tracking-widest text-xs mb-2">Performance</h3>
+<div class="text-3xl font-headline font-black text-on-surface mb-4">SILVER</div>
+<div class="flex items-baseline gap-1">
+<span class="text-4xl font-headline font-bold">$449</span>
+<span class="text-zinc-500 text-sm">/service</span>
+</div>
+</div>
+<ul class="space-y-4 mb-10 flex-grow">
+<li class="flex items-center gap-3 text-sm text-zinc-300">
+<span class="material-symbols-outlined text-zinc-500 text-lg" data-icon="check_circle">check_circle</span>
+                            All Basic Features
+                        </li>
+<li class="flex items-center gap-3 text-sm text-zinc-300">
+<span class="material-symbols-outlined text-zinc-500 text-lg" data-icon="check_circle">check_circle</span>
+                            Stage 1 Paint Correction
+                        </li>
+<li class="flex items-center gap-3 text-sm text-zinc-300">
+<span class="material-symbols-outlined text-zinc-500 text-lg" data-icon="check_circle">check_circle</span>
+                            1-Year Ceramic Lite
+                        </li>
+<li class="flex items-center gap-3 text-sm text-zinc-300">
+<span class="material-symbols-outlined text-zinc-500 text-lg" data-icon="check_circle">check_circle</span>
+                            Wheel Face Coating
+                        </li>
+</ul>
+<button class="w-full py-4 rounded-lg bg-surface-container-high text-zinc-400 font-bold uppercase tracking-tighter text-sm hover:bg-zinc-100 hover:text-surface transition-all">Book Now</button>
+</div>
+<!-- Gold Package (Featured) -->
+<div class="relative glass-card rounded-xl p-8 transition-all duration-500 group border border-primary-container/30 shadow-[0_0_40px_-15px_rgba(225,6,0,0.15)] flex flex-col h-[110%] z-10 scale-105">
+<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-zinc-100 text-black px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-[0.2em]">Most Popular</div>
+<div class="mb-8">
+<h3 class="text-zinc-500 font-headline font-bold uppercase tracking-widest text-xs mb-2">Elite Status</h3>
+<div class="text-4xl font-headline font-black text-on-surface mb-4">GOLD</div>
+<div class="flex items-baseline gap-1">
+<span class="text-5xl font-headline font-bold">$899</span>
+<span class="text-zinc-500 text-sm">/service</span>
+</div>
+</div>
+<ul class="space-y-5 mb-10 flex-grow">
+<li class="flex items-center gap-3 text-sm text-on-surface font-semibold">
+<span class="material-symbols-outlined text-primary-container text-xl" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+                            3-Year Graphene Ceramic
+                        </li>
+<li class="flex items-center gap-3 text-sm text-on-surface font-semibold">
+<span class="material-symbols-outlined text-primary-container text-xl" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+                            Stage 2 Precision Polishing
+                        </li>
+<li class="flex items-center gap-3 text-sm text-on-surface font-semibold">
+<span class="material-symbols-outlined text-primary-container text-xl" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+                            Glass &amp; Trim Protection
+                        </li>
+<li class="flex items-center gap-3 text-sm text-on-surface font-semibold">
+<span class="material-symbols-outlined text-primary-container text-xl" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+                            Full Interior Detail &amp; Guard
+                        </li>
+</ul>
+<button class="w-full py-5 rounded-lg bg-primary-container text-white font-black uppercase tracking-widest text-sm hover:scale-[1.02] active:scale-95 transition-all shadow-lg">Book Now</button>
+</div>
+<!-- Platinum Package -->
+<div class="glass-card rounded-xl p-8 transition-all duration-500 group red-glow-hover border border-white/5 flex flex-col h-full">
+<div class="mb-8">
+<h3 class="text-zinc-500 font-headline font-bold uppercase tracking-widest text-xs mb-2">Collector</h3>
+<div class="text-3xl font-headline font-black text-on-surface mb-4">PLATINUM</div>
+<div class="flex items-baseline gap-1">
+<span class="text-4xl font-headline font-bold">$1,499</span>
+<span class="text-zinc-500 text-sm">/service</span>
+</div>
+</div>
+<ul class="space-y-4 mb-10 flex-grow">
+<li class="flex items-center gap-3 text-sm text-zinc-300">
+<span class="material-symbols-outlined text-zinc-500 text-lg" data-icon="check_circle">check_circle</span>
+                            Lifetime Ceramic Warranty
+                        </li>
+<li class="flex items-center gap-3 text-sm text-zinc-300">
+<span class="material-symbols-outlined text-zinc-500 text-lg" data-icon="check_circle">check_circle</span>
+                            Front End PPF Shield
+                        </li>
+<li class="flex items-center gap-3 text-sm text-zinc-300">
+<span class="material-symbols-outlined text-zinc-500 text-lg" data-icon="check_circle">check_circle</span>
+                            Full Undercarriage Service
+                        </li>
+<li class="flex items-center gap-3 text-sm text-zinc-300">
+<span class="material-symbols-outlined text-zinc-500 text-lg" data-icon="check_circle">check_circle</span>
+                            Engine Bay Detailing
+                        </li>
+</ul>
+<button class="w-full py-4 rounded-lg bg-surface-container-high text-zinc-400 font-bold uppercase tracking-tighter text-sm hover:bg-zinc-100 hover:text-surface transition-all">Book Now</button>
+</div>
+</div>
+</section>
+<!-- Asymmetric CTA Section -->
+<section class="max-w-screen-2xl mx-auto px-10 mb-32">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-0 overflow-hidden rounded-3xl bg-surface-container-low border border-white/5 shadow-2xl">
+<div class="lg:col-span-7 p-16 flex flex-col justify-center">
+<h2 class="text-4xl font-headline font-black uppercase tracking-tighter mb-6">Need a Custom <br/><span class="text-zinc-100">Configuration?</span></h2>
+<p class="text-zinc-400 mb-8 max-w-md">Our specialist team can build a custom maintenance and protection package tailored to your vehicle's specific needs and storage conditions.</p>
+<div class="flex gap-4">
+<button class="bg-primary-container text-white px-8 py-3 rounded-full font-bold uppercase text-xs tracking-widest hover:bg-zinc-100 hover:text-black transition-all">Consult Expert</button>
+<button class="border border-white/20 text-white px-8 py-3 rounded-full font-bold uppercase text-xs tracking-widest hover:bg-white/5 transition-all">View Warranty</button>
+</div>
+</div>
+<div class="lg:col-span-5 relative min-h-[400px]">
+<img class="absolute inset-0 w-full h-full object-cover kinetic-asymmetry grayscale opacity-60 group-hover:grayscale-0 transition-all duration-700" data-alt="Luxury car being detailed under bright cinematic studio lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCD0Wh0jn9iQoI6prG5HcGyX5NbQ5laLmZDGEUnHSM27haS4yQhuSkoP8mj1HOw86Wn6PFXwUgYs0mcOnXZgEnI6vYnESjuFN3W-uEJbHZ3wJ1xLngm01dIc0qqpElr6kVuuoB65Sp0c2w4vU-f4fKcvXsqtYOQfZPjMlU-YZd8gQbOB7465kT-4JsCdNNVtZ3aVAnx-i0CQZNtW4nkO0Ak5SVs1owCALvZL3ZW9RfSBbHSexRFjsUfikdtSLBWOq_aHIPAZvytnvHA"/>
+<div class="absolute inset-0 bg-gradient-to-r from-surface-container-low via-surface-container-low/80 to-transparent"></div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-zinc-950 border-t border-zinc-900">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-20 max-w-screen-2xl mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="text-xl font-black text-zinc-100 mb-4 font-headline uppercase">GK AUTO HERB</div>
+<p class="text-zinc-500 font-['Manrope'] text-sm leading-relaxed mb-6">Precision engineered surface protection and high-performance automotive aesthetics.</p>
+<div class="flex space-x-4">
+<span class="material-symbols-outlined text-zinc-700 hover:text-primary-container cursor-pointer transition-colors" data-icon="public">public</span>
+<span class="material-symbols-outlined text-zinc-700 hover:text-primary-container cursor-pointer transition-colors" data-icon="share">share</span>
+<span class="material-symbols-outlined text-zinc-700 hover:text-primary-container cursor-pointer transition-colors" data-icon="alternate_email">alternate_email</span>
+</div>
+</div>
+<div class="col-span-1">
+<h4 class="text-zinc-100 font-headline font-bold text-xs uppercase tracking-[0.2em] mb-8">Navigation</h4>
+<ul class="space-y-4">
+<li><a class="text-zinc-500 hover:text-zinc-200 text-sm font-['Manrope'] transition-transform hover:translate-x-1 inline-block" href="#">Home</a></li>
+<li><a class="text-zinc-500 hover:text-zinc-200 text-sm font-['Manrope'] transition-transform hover:translate-x-1 inline-block" href="#">Services</a></li>
+<li><a class="text-zinc-300 font-bold text-sm font-['Manrope'] transition-transform hover:translate-x-1 inline-block" href="#">Packages</a></li>
+<li><a class="text-zinc-500 hover:text-zinc-200 text-sm font-['Manrope'] transition-transform hover:translate-x-1 inline-block" href="#">Gallery</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h4 class="text-zinc-100 font-headline font-bold text-xs uppercase tracking-[0.2em] mb-8">Support</h4>
+<ul class="space-y-4">
+<li><a class="text-zinc-500 hover:text-zinc-200 text-sm font-['Manrope'] transition-transform hover:translate-x-1 inline-block" href="#">Quick Booking</a></li>
+<li><a class="text-zinc-500 hover:text-zinc-200 text-sm font-['Manrope'] transition-transform hover:translate-x-1 inline-block" href="#">Location</a></li>
+<li><a class="text-zinc-500 hover:text-zinc-200 text-sm font-['Manrope'] transition-transform hover:translate-x-1 inline-block" href="#">Warranty</a></li>
+<li><a class="text-zinc-500 hover:text-zinc-200 text-sm font-['Manrope'] transition-transform hover:translate-x-1 inline-block" href="#">Contact</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h4 class="text-zinc-100 font-headline font-bold text-xs uppercase tracking-[0.2em] mb-8">Newsletter</h4>
+<p class="text-zinc-500 text-sm mb-4">Join our elite list for detailing tips and exclusive package drops.</p>
+<div class="relative group">
+<input class="w-full bg-zinc-900 border-none rounded-lg py-3 px-4 text-sm text-on-surface focus:ring-1 focus:ring-primary-container/40 placeholder:text-zinc-700 transition-all" placeholder="Email address" type="email"/>
+<button class="absolute right-2 top-2 text-zinc-600 hover:text-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<div class="max-w-screen-2xl mx-auto px-12 py-8 border-t border-zinc-900 flex flex-col md:flex-row justify-between items-center gap-4">
+<span class="text-zinc-700 text-[10px] uppercase tracking-widest font-['Manrope']">© 2024 GK AUTO HERB. High-Performance Car Protection.</span>
+<div class="flex gap-8">
+<a class="text-zinc-700 text-[10px] uppercase tracking-widest hover:text-zinc-400" href="#">Privacy Policy</a>
+<a class="text-zinc-700 text-[10px] uppercase tracking-widest hover:text-zinc-400" href="#">Terms of Service</a>
+</div>
+</div>
+</footer>
+</body></html>
