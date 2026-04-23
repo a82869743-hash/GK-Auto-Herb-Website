@@ -2,17 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ═══════════════════════════════════════════════════════
+   GK AUTO HERB — Ultra-Premium Design System
+   ═══════════════════════════════════════════════════════ */
+
 /* Material Symbols */
 .material-symbols-outlined {
   font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
 
-/* Glass Effects */
+/* ═══════════════════ GLASS MORPHISM ═══════════════════ */
 .glass-card {
   background: rgba(15, 15, 15, 0.4);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  background: rgba(20, 20, 20, 0.55);
+  border-color: rgba(255, 255, 255, 0.1);
 }
 
 .glass-panel {
@@ -22,7 +32,7 @@
   border: 1px solid rgba(255, 255, 255, 0.03);
 }
 
-/* Glow Effects */
+/* ═══════════════════ GLOW EFFECTS ═══════════════════ */
 .red-glow {
   box-shadow: 0 0 40px -5px rgba(225, 6, 0, 0.4);
 }
@@ -44,7 +54,7 @@
   border-color: rgba(192, 5, 0, 0.3);
 }
 
-/* Text Gradients */
+/* ═══════════════════ TEXT GRADIENTS ═══════════════════ */
 .text-gradient-subtle {
   background: linear-gradient(135deg, #ffffff 0%, #a0a0a0 100%);
   -webkit-background-clip: text;
@@ -57,22 +67,71 @@
   -webkit-text-fill-color: transparent;
 }
 
-/* Hero Gradient */
+/* Ultra-premium shimmer gradient for hero titles */
+.text-gradient-shimmer {
+  background: linear-gradient(
+    110deg,
+    #ffffff 0%,
+    #ffffff 30%,
+    rgba(225, 6, 0, 0.8) 50%,
+    #ffffff 70%,
+    #ffffff 100%
+  );
+  background-size: 250% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textShimmer 6s ease-in-out infinite;
+}
+
+@keyframes textShimmer {
+  0%, 100% { background-position: 150% center; }
+  50% { background-position: -50% center; }
+}
+
+/* ═══════════════════ GRADIENT BACKGROUNDS ═══════════════════ */
 .hero-gradient {
   background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
 }
 
-/* Kinetic Asymmetry */
+.premium-gradient-bg {
+  background: linear-gradient(180deg, #000000 0%, #0a0a0a 30%, #0f0f0f 50%, #0a0a0a 70%, #000000 100%);
+}
+
+/* Animated mesh gradient background */
+.mesh-gradient-bg {
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(225, 6, 0, 0.04) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(255, 255, 255, 0.02) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 80%, rgba(225, 6, 0, 0.03) 0%, transparent 50%),
+    linear-gradient(180deg, #000000 0%, #050505 100%);
+}
+
+/* ═══════════════════ CLIP PATHS ═══════════════════ */
 .kinetic-asymmetry {
   clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
 }
 
-/* WhatsApp Float */
+/* ═══════════════════ WHATSAPP FLOAT ═══════════════════ */
 .whatsapp-float {
   box-shadow: 0 8px 30px rgba(37, 211, 102, 0.3);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Product Card Hover */
+.whatsapp-float:hover {
+  box-shadow: 0 12px 40px rgba(37, 211, 102, 0.5);
+  transform: scale(1.08);
+}
+
+@keyframes whatsappPulse {
+  0% { transform: scale(1); opacity: 0.5; }
+  100% { transform: scale(1.8); opacity: 0; }
+}
+
+.animate-whatsapp-pulse {
+  animation: whatsappPulse 2s ease-out infinite;
+}
+
+/* ═══════════════════ PRODUCT CARDS ═══════════════════ */
 .product-card-glow {
   transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s ease;
 }
@@ -81,14 +140,370 @@
   box-shadow: 0 0 35px -10px rgba(225, 6, 0, 0.15), 0 20px 40px -15px rgba(0, 0, 0, 0.5);
 }
 
-/* Custom Scrollbar */
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: #000000; }
-::-webkit-scrollbar-thumb { background: #333; border-radius: 10px; }
-::-webkit-scrollbar-thumb:hover { background: #e10600; cursor: pointer; }
+/* ═══════════════════ CERTIFICATION CARDS ═══════════════════ */
+.cert-card-hover {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s ease;
+}
+.cert-card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 60px -15px rgba(225, 6, 0, 0.1), 0 0 0 1px rgba(225, 6, 0, 0.1);
+}
 
-/* Selection */
+/* ═══════════════════ ULTRA-PREMIUM KEYFRAMES ═══════════════════ */
+
+/* Floating particles effect */
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  33% { transform: translateY(-12px) rotate(1deg); }
+  66% { transform: translateY(6px) rotate(-1deg); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float 10s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float 8s ease-in-out 2s infinite;
+}
+
+/* Slide in from left */
+@keyframes slideInLeft {
+  from { transform: translateX(-40px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+.animate-slide-left {
+  animation: slideInLeft 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Scale in with bounce */
+@keyframes scaleIn {
+  0% { transform: scale(0.85); opacity: 0; }
+  60% { transform: scale(1.02); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Gradient border animation */
+@keyframes borderGlow {
+  0%, 100% { border-color: rgba(225, 6, 0, 0.1); }
+  50% { border-color: rgba(225, 6, 0, 0.35); }
+}
+
+.animate-border-glow {
+  animation: borderGlow 3s ease-in-out infinite;
+}
+
+/* Reveal line (for section dividers) */
+@keyframes revealLine {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+.animate-reveal-line {
+  animation: revealLine 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Pulsing glow orb */
+@keyframes orbPulse {
+  0%, 100% { opacity: 0.15; transform: scale(1); }
+  50% { opacity: 0.25; transform: scale(1.1); }
+}
+
+.animate-orb-pulse {
+  animation: orbPulse 5s ease-in-out infinite;
+}
+
+/* Counter number reveal */
+@keyframes numberReveal {
+  0% { transform: translateY(100%); opacity: 0; filter: blur(4px); }
+  100% { transform: translateY(0); opacity: 1; filter: blur(0); }
+}
+
+.animate-number-reveal {
+  animation: numberReveal 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Smooth horizontal scan line */
+@keyframes scanLine {
+  0% { transform: translateX(-200%); }
+  100% { transform: translateX(200%); }
+}
+
+.scan-line::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent 0%, rgba(225, 6, 0, 0.05) 50%, transparent 100%);
+  transform: translateX(-200%);
+  animation: scanLine 6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  pointer-events: none;
+}
+
+/* ═══════════════════ PREMIUM HOVER EFFECTS ═══════════════════ */
+
+/* Magnetic hover lift */
+.hover-lift {
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.hover-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 
+    0 20px 40px -15px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+/* Premium button effects */
+.btn-premium {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-premium::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(225, 6, 0, 0.15);
+  border-radius: 50%;
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translate(-50%, -50%);
+}
+
+.btn-premium:hover::before {
+  width: 300%;
+  height: 300%;
+}
+
+/* Shine sweep on hover */
+.hover-shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.hover-shine::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 30%;
+  height: 200%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.04),
+    transparent
+  );
+  transform: rotate(25deg);
+  transition: left 0.7s ease;
+}
+
+.hover-shine:hover::after {
+  left: 120%;
+}
+
+/* Text reveal on hover */
+.text-reveal-hover {
+  position: relative;
+  overflow: hidden;
+}
+
+.text-reveal-hover::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #e10600, transparent);
+  transform: translateX(-100%);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.text-reveal-hover:hover::after {
+  transform: translateX(0);
+}
+
+/* ═══════════════════ NOISE TEXTURE OVERLAY ═══════════════════ */
+.noise-overlay::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.015;
+  z-index: 9999;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* ═══════════════════ GRID PATTERN ═══════════════════ */
+.grid-pattern {
+  background-image: 
+    linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* ═══════════════════ SCROLLBAR ═══════════════════ */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #000000; }
+::-webkit-scrollbar-thumb { 
+  background: linear-gradient(180deg, #333 0%, #222 100%); 
+  border-radius: 10px; 
+}
+::-webkit-scrollbar-thumb:hover { 
+  background: linear-gradient(180deg, #e10600 0%, #8e1208 100%); 
+  cursor: pointer; 
+}
+
+/* ═══════════════════ SELECTION ═══════════════════ */
 ::selection {
   background-color: rgba(225, 6, 0, 0.4);
   color: white;
 }
+
+/* ═══════════════════ SMOOTH SCROLL ═══════════════════ */
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ═══════════════════ IMAGE HOVER EFFECTS ═══════════════════ */
+.img-zoom {
+  overflow: hidden;
+}
+
+.img-zoom img {
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), filter 0.8s ease;
+}
+
+.img-zoom:hover img {
+  transform: scale(1.08);
+  filter: brightness(1.1);
+}
+
+/* Parallax-style card tilt */
+.card-3d {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+/* ═══════════════════ SECTION TRANSITIONS ═══════════════════ */
+.section-fade {
+  position: relative;
+}
+
+.section-fade::before,
+.section-fade::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 120px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.section-fade::before {
+  top: 0;
+  background: linear-gradient(180deg, #000 0%, transparent 100%);
+}
+
+.section-fade::after {
+  bottom: 0;
+  background: linear-gradient(0deg, #000 0%, transparent 100%);
+}
+
+/* ═══════════════════ LOADING STATE ═══════════════════ */
+@keyframes skeleton {
+  0% { opacity: 0.5; }
+  50% { opacity: 0.2; }
+  100% { opacity: 0.5; }
+}
+
+.skeleton-pulse {
+  animation: skeleton 1.5s ease-in-out infinite;
+  background: linear-gradient(90deg, rgba(255,255,255,0.03) 25%, rgba(255,255,255,0.06) 50%, rgba(255,255,255,0.03) 75%);
+  background-size: 200% 100%;
+}
+
+/* ═══════════════════ MOBILE ═══════════════════ */
+@media (max-width: 767px) {
+  body {
+    padding-bottom: 70px;
+  }
+}
+
+/* ═══════════════════ FOCUS STATES ═══════════════════ */
+*:focus-visible {
+  outline: 2px solid rgba(225, 6, 0, 0.6);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ═══════════════════ PAGE TRANSITIONS ═══════════════════ */
+@keyframes pageIn {
+  0% { opacity: 0; transform: translateY(12px); filter: blur(4px); }
+  100% { opacity: 1; transform: translateY(0); filter: blur(0); }
+}
+
+.page-enter {
+  animation: pageIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* ═══════════════════ DIVIDER ANIMATIONS ═══════════════════ */
+.divider-gradient {
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(225, 6, 0, 0.3) 50%, transparent 100%);
+}
+
+.divider-dot::before {
+  content: '◆';
+  display: inline-block;
+  color: rgba(225, 6, 0, 0.4);
+  font-size: 6px;
+  margin: 0 8px;
+}
+
+/* ═══════════════════ BRAND MARQUEE ═══════════════════ */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marqueeReverse {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+.animate-marquee {
+  animation: marquee 35s linear infinite;
+  width: max-content;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+.animate-marquee-reverse {
+  animation: marqueeReverse 35s linear infinite;
+  width: max-content;
+}
+
+.animate-marquee-reverse:hover {
+  animation-play-state: paused;
+}
+
