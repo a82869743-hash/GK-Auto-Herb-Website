@@ -423,8 +423,7 @@ export default function AboutPage() {
                 </div>
                 <h3 className="text-white font-headline font-bold uppercase tracking-wider text-sm mb-4">Working Hours</h3>
                 <p className="text-zinc-400 text-sm font-light leading-relaxed">
-                  Wed — Thu: <span className="text-white font-medium">9 AM – 5 PM</span><br />
-                  Fri — Tue: <span className="text-white font-medium">9 AM – 8 PM</span>
+                  Mon — Sun: <span className="text-white font-medium">9 AM – 8 PM</span>
                 </p>
               </div>
 

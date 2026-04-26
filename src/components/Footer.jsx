@@ -110,8 +110,7 @@ export default function Footer() {
             <span className="text-white font-bold">094084 24541</span>
           </p>
           <div className="text-zinc-500 text-xs leading-relaxed space-y-1">
-            <p>Wed — Thu: <span className="text-zinc-300">9 AM – 5 PM</span></p>
-            <p>Fri — Tue: <span className="text-zinc-300">9 AM – 8 PM</span></p>
+            <p>Mon — Sun: <span className="text-zinc-300">9 AM – 8 PM</span></p>
           </div>
           <motion.a 
             href="https://maps.google.com/maps?q=ASTONISH%20BRAND%20STORE-%20GK%20AUTO%20HERB%2C%20Tilak%20Nagar%20society%2C%20shree%20kunj%20greens%2C%204%2C%20Besides%2C%20opp.%20AP%20Mart%20super%20store%2C%20New%20Alkapuri%2C%20Laxmipura%2C%20Vadodara%2C%20Gujarat%20390021" 

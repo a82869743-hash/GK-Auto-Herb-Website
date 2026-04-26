@@ -83,11 +83,7 @@ export default function ContactPage() {
             <h3 className="font-headline font-bold uppercase tracking-widest text-zinc-500 mb-8 text-xs">Operating Hours</h3>
             <div className="space-y-4">
               <div className="flex justify-between border-b border-white/5 pb-3">
-                <span className="text-zinc-400 font-light text-sm">Wed — Thu</span>
-                <span className="text-white font-bold text-sm tracking-widest">09:00 - 17:00</span>
-              </div>
-              <div className="flex justify-between border-b border-white/5 pb-3">
-                <span className="text-zinc-400 font-light text-sm">Fri — Tue</span>
+                <span className="text-zinc-400 font-light text-sm">Mon — Sun</span>
                 <span className="text-white font-bold text-sm tracking-widest">09:00 - 20:00</span>
               </div>
             </div>
