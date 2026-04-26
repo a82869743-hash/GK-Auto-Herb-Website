@@ -362,6 +362,9 @@ function ServiceCard({ service, isOpen, onToggle }) {
     <motion.div
       ref={cardRef}
       variants={cardVariants}
+      initial="hidden"
+      animate="visible"
+      exit="hidden"
       layout
       onLayoutAnimationComplete={() => {
         if (isOpen && cardRef.current) {
