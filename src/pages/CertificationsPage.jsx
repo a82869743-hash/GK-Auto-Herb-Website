@@ -237,13 +237,13 @@ export default function CertificationsPage() {
               Our certifications aren't just pieces of paper — they represent real training, real skill, and real trust from the world's leading automotive brands.
             </motion.p>
             <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link 
-                to="/contact"
+              <a 
+                href="https://gkautobook.cloud/login" target="_blank" rel="noopener noreferrer"
                 className="group relative px-10 py-5 rounded-full font-black text-sm uppercase tracking-[0.2em] transition-all duration-500 hover:scale-105 w-full sm:w-auto overflow-hidden"
               >
                 <div className="absolute inset-0 bg-primary-container rounded-full red-glow transition-all duration-500 group-hover:bg-red-600"></div>
-                <span className="relative text-white z-10">Book a Session →</span>
-              </Link>
+                <span className="relative text-white z-10">Book Now →</span>
+              </a>
               <a href="tel:09408424541" className="group relative px-10 py-5 rounded-full font-black text-sm uppercase tracking-[0.2em] transition-all duration-500 hover:scale-105 border border-white/10 bg-white/5 backdrop-blur-md hover:bg-white hover:text-black w-full sm:w-auto text-center text-white">
                 <span className="relative z-10">Call Us Now</span>
               </a>

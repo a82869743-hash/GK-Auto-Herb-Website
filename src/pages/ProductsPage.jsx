@@ -767,12 +767,12 @@ export default function ProductsPage() {
                   WhatsApp Us
                 </span>
               </a>
-              <Link
-                to="/contact"
-                className="bg-transparent border border-white/20 text-white px-12 py-5 rounded-full font-black uppercase tracking-widest text-sm hover:bg-white/5 transition-all"
+              <a
+                href="https://gkautobook.cloud/login" target="_blank" rel="noopener noreferrer"
+                className="bg-transparent border border-white/20 text-white px-12 py-5 rounded-full font-black uppercase tracking-widest text-sm hover:bg-white/5 transition-all flex items-center justify-center"
               >
-                Visit Store
-              </Link>
+                Book Now
+              </a>
             </div>
           </div>
         </motion.div>

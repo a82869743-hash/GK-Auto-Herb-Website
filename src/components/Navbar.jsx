@@ -86,13 +86,15 @@ export default function Navbar() {
 
         {/* Actions */}
         <div className="flex items-center gap-4 md:gap-6">
-          <Link
-            to="/contact"
+          <a
+            href="https://gkautobook.cloud/login"
+            target="_blank"
+            rel="noopener noreferrer"
             className="hidden md:flex group relative bg-transparent border border-white/20 text-white px-8 py-2.5 rounded-full font-bold text-xs uppercase tracking-widest overflow-hidden transition-all duration-600 hover:border-primary-container hover:shadow-[0_0_25px_-5px_rgba(225,6,0,0.3)]"
           >
             <div className="absolute inset-0 bg-primary-container translate-y-full group-hover:translate-y-0 transition-transform duration-600 ease-[cubic-bezier(0.16,1,0.3,1)]"></div>
-            <span className="relative z-10 transition-all duration-300">Book Session</span>
-          </Link>
+            <span className="relative z-10 transition-all duration-300">Book Now</span>
+          </a>
           
           {/* Mobile hamburger */}
           <button
@@ -148,13 +150,15 @@ export default function Navbar() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5, duration: 0.4 }}
               >
-                <Link
-                  to="/contact"
+                <a
+                  href="https://gkautobook.cloud/login"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   onClick={() => setMobileOpen(false)}
                   className="bg-primary-container text-white text-center py-4 rounded-xl font-bold text-sm uppercase tracking-widest shadow-[0_0_20px_rgba(225,6,0,0.3)] mt-4 block hover:shadow-[0_0_35px_rgba(225,6,0,0.5)] transition-shadow duration-500"
                 >
-                  Book Session
-                </Link>
+                  Book Now
+                </a>
               </motion.div>
             </div>
           </motion.div>

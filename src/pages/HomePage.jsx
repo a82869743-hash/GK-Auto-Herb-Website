@@ -83,11 +83,11 @@ export default function HomePage() {
           </motion.p>
           
           <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row items-center justify-center gap-6">
-            <Link to="/contact" className="group relative px-10 py-5 rounded-full font-black text-sm uppercase tracking-[0.2em] transition-all duration-500 hover:scale-105 w-full sm:w-auto overflow-hidden">
+            <a href="https://gkautobook.cloud/login" target="_blank" rel="noopener noreferrer" className="group relative px-10 py-5 rounded-full font-black text-sm uppercase tracking-[0.2em] transition-all duration-500 hover:scale-105 w-full sm:w-auto overflow-hidden">
               <div className="absolute inset-0 bg-primary-container rounded-full red-glow transition-all duration-500 group-hover:bg-red-600"></div>
               <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"></span>
               <span className="relative text-white z-10">Book Now →</span>
-            </Link>
+            </a>
             <Link to="/gallery" className="group relative px-10 py-5 rounded-full font-black text-sm uppercase tracking-[0.2em] transition-all duration-500 hover:scale-105 border border-white/10 bg-white/5 backdrop-blur-md hover:bg-white hover:text-black w-full sm:w-auto">
               <span className="relative z-10">View Gallery</span>
             </Link>
@@ -639,8 +639,8 @@ export default function HomePage() {
               Experience the difference that professional-grade detailing makes. Book your session now and drive perfection.
             </motion.p>
             <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link 
-                to="/contact"
+              <a 
+                href="https://gkautobook.cloud/login" target="_blank" rel="noopener noreferrer"
                 className="group relative px-12 py-5 rounded-full font-black text-sm uppercase tracking-[0.2em] transition-all duration-500 hover:scale-105 w-full sm:w-auto overflow-hidden text-center"
               >
                 <div className="absolute inset-0 bg-primary-container rounded-full red-glow transition-all duration-500 group-hover:bg-red-600"></div>
@@ -648,7 +648,7 @@ export default function HomePage() {
                   <span className="material-symbols-outlined text-sm" style={{fontVariationSettings: "'FILL' 1"}}>calendar_month</span>
                   Book Now
                 </span>
-              </Link>
+              </a>
               <a href="tel:09408424541" className="group relative px-12 py-5 rounded-full font-black text-sm uppercase tracking-[0.2em] transition-all duration-500 hover:scale-105 border border-white/10 bg-white/5 backdrop-blur-md hover:bg-white hover:text-black w-full sm:w-auto text-center text-white">
                 <span className="relative z-10 flex items-center justify-center gap-2">
                   <Phone className="w-4 h-4" />
@@ -748,12 +748,12 @@ export default function HomePage() {
         >
           <Phone className="w-4 h-4" /> Call
         </a>
-        <Link 
-          to="/contact"
+        <a 
+          href="https://gkautobook.cloud/login" target="_blank" rel="noopener noreferrer"
           className="flex-1 py-3.5 rounded-full bg-primary-container text-white font-black text-xs uppercase tracking-widest text-center red-glow"
         >
           Book Now
-        </Link>
+        </a>
       </motion.div>
     </>
   );

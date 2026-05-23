@@ -1,4 +1,5 @@
 {
+  "name": "gk-auto-herb-website",
   "rewrites": [
     {
       "source": "/(.*)",

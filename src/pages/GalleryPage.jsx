@@ -243,9 +243,9 @@ export default function GalleryPage() {
               <p className="text-zinc-400 text-base md:text-lg lg:text-xl font-light leading-relaxed">Join our elite circle of clients who settle for nothing less than perfection. Limited detailing slots available monthly.</p>
             </div>
             <div className="flex flex-col items-center md:items-end gap-6 w-full md:w-auto">
-              <Link to="/contact" className="w-full md:w-auto bg-white text-black px-12 py-5 rounded-full font-headline font-black uppercase tracking-widest text-sm hover:scale-105 transition-transform shadow-[0_0_30px_rgba(255,255,255,0.2)] text-center">
-                Get a Free Quote
-              </Link>
+              <a href="https://gkautobook.cloud/login" target="_blank" rel="noopener noreferrer" className="w-full md:w-auto bg-white text-black px-12 py-5 rounded-full font-headline font-black uppercase tracking-widest text-sm hover:scale-105 transition-transform shadow-[0_0_30px_rgba(255,255,255,0.2)] text-center">
+                Book Now
+              </a>
               <p className="text-[10px] md:text-xs uppercase tracking-[0.2em] font-bold text-zinc-500 flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
                 Response within 24 hours

@@ -723,9 +723,9 @@ export default function ServicesPage() {
               <Link to="/packages" className="bg-white text-black px-12 py-5 rounded-full font-black uppercase tracking-widest text-sm hover:scale-105 transition-all shadow-[0_0_30px_rgba(255,255,255,0.2)]">
                 View Packages & Pricing
               </Link>
-              <Link to="/contact" className="bg-transparent border border-white/20 text-white px-12 py-5 rounded-full font-black uppercase tracking-widest text-sm hover:bg-white/5 transition-all">
-                Contact Us
-              </Link>
+              <a href="https://gkautobook.cloud/login" target="_blank" rel="noopener noreferrer" className="bg-transparent border border-white/20 text-white px-12 py-5 rounded-full font-black uppercase tracking-widest text-sm hover:bg-white/5 transition-all flex items-center justify-center">
+                Book Now
+              </a>
             </div>
           </div>
         </motion.div>

@@ -149,7 +149,7 @@ export default function AboutPage() {
 
 
       {/* ═══════════════════════════════════════════════════════════════
-          FOUNDER SECTION — Gaurav Kumar Spotlight
+          FOUNDER SECTION — Gaurav Kathuria Spotlight
       ═══════════════════════════════════════════════════════════════ */}
       <section className="py-24 md:py-36 relative z-10 border-t border-white/5 overflow-hidden" style={{ background: 'linear-gradient(180deg, #000 0%, #080808 50%, #000 100%)' }}>
         {/* Background Glow */}
@@ -477,7 +477,7 @@ export default function AboutPage() {
               rel="noopener noreferrer"
               className="group inline-flex items-center gap-3 bg-primary-container hover:bg-white text-white hover:text-black font-headline font-bold uppercase tracking-widest text-xs px-10 py-4 rounded-full transition-all duration-300 hover:shadow-xl"
             >
-              Contact Us
+              Book Now
               <span className="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">arrow_forward</span>
             </a>
             <Link
