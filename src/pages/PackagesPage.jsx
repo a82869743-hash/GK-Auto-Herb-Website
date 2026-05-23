@@ -102,13 +102,67 @@ const washChecklist = [
   { id: 25, text: 'Remove odour, bacteria and viruses from car', tiers: [false, false, false, true] }
 ];
 
-/* ── Annual Care Packages ── */
 const annualCareData = [
-  { name: 'Bronze Package', payFor: '3 Car Foam Wash', comps: ['1 Car Foam Wash', '1 Body Wax Coat'] },
-  { name: 'Silver Package', payFor: '5 Car Foam Wash', comps: ['2 Car Foam Wash', '2 Body Wax Coat', '1 Two Wheeler Wash', '1 Two Wheeler Wax Coat', '1 Body Hybrid Ceramic Wax Coat', 'Deep Cleaning'] },
-  { name: 'Gold Package', payFor: '8 Car Foam Wash', comps: ['4 Car Foam Wash', '3 Body Wax Coat', '1 Two Wheeler Wash', '1 Two Wheeler Wax Coat', '1 Body Hybrid Ceramic Wax Coat', 'Deep Cleaning'] },
-  { name: 'Diamond Package', payFor: '10 Car Foam Wash', comps: ['6 Car Foam Wash', '2 Body Wax Coat', '2 Two Wheeler Wash', '1 Two Wheeler Wax Coat', '1 Body Hybrid Ceramic Wax Coat', 'Deep Cleaning'] },
-  { name: 'Platinum Package', payFor: '12 Car Foam Wash', comps: ['8 Car Foam Wash', '3 Body Wax Coat', '2 Two Wheeler Wash', '1 Two Wheeler Wax Coat', '1 Body Hybrid Ceramic Wax Coat', '1 Deep Cleaning'] },
+  { 
+    name: 'Bronze Package', 
+    payFor: '3 Car Foam Wash', 
+    comps: [
+      { text: '1 Car Foam Wash', included: true },
+      { text: '1 Body Wax Coat', included: true },
+      { text: 'Two Wheeler Wash', included: false },
+      { text: 'Two Wheeler Wax Coat', included: false },
+      { text: 'Body Hybrid Ceramic Wax Coat', included: false },
+      { text: 'Deep Cleaning', included: false },
+    ] 
+  },
+  { 
+    name: 'Silver Package', 
+    payFor: '5 Car Foam Wash', 
+    comps: [
+      { text: '2 Car Foam Wash', included: true },
+      { text: '2 Body Wax Coat', included: true },
+      { text: 'Two Wheeler Wash', included: false },
+      { text: 'Two Wheeler Wax Coat', included: false },
+      { text: 'Body Hybrid Ceramic Wax Coat', included: false },
+      { text: 'Deep Cleaning', included: false },
+    ] 
+  },
+  { 
+    name: 'Gold Package', 
+    payFor: '8 Car Foam Wash', 
+    comps: [
+      { text: '4 Car Foam Wash', included: true },
+      { text: '3 Body Wax Coat', included: true },
+      { text: '1 Two Wheeler Wash', included: true },
+      { text: '1 Two Wheeler Wax Coat', included: true },
+      { text: 'Body Hybrid Ceramic Wax Coat', included: false },
+      { text: 'Deep Cleaning', included: false },
+    ] 
+  },
+  { 
+    name: 'Diamond Package', 
+    payFor: '10 Car Foam Wash', 
+    comps: [
+      { text: '6 Car Foam Wash', included: true },
+      { text: '2 Body Wax Coat', included: true },
+      { text: '2 Two Wheeler Wash', included: true },
+      { text: '1 Two Wheeler Wax Coat', included: true },
+      { text: '1 Body Hybrid Ceramic Wax Coat', included: true },
+      { text: 'Deep Cleaning', included: false },
+    ] 
+  },
+  { 
+    name: 'Platinum Package', 
+    payFor: '12 Car Foam Wash', 
+    comps: [
+      { text: '8 Car Foam Wash', included: true },
+      { text: '3 Body Wax Coat', included: true },
+      { text: '2 Two Wheeler Wash', included: true },
+      { text: '1 Two Wheeler Wax Coat', included: true },
+      { text: '1 Body Hybrid Ceramic Wax Coat', included: true },
+      { text: '1 Deep Cleaning', included: true },
+    ] 
+  },
 ];
 
 export default function PackagesPage() {
@@ -546,17 +600,21 @@ export default function PackagesPage() {
                     <ul className="space-y-3 flex-grow">
                       {pkg.comps.map((item, i) => (
                         <li key={i} className="flex items-start gap-3">
-                          <span className="material-symbols-outlined text-green-500 text-sm mt-0.5" style={{fontVariationSettings: "'FILL' 1"}}>check</span>
-                          <span className="text-zinc-300 text-xs leading-relaxed">{item}</span>
+                          {item.included ? (
+                            <span className="material-symbols-outlined text-green-500 text-sm mt-0.5" style={{fontVariationSettings: "'FILL' 1"}}>check</span>
+                          ) : (
+                            <span className="material-symbols-outlined text-red-500 text-sm mt-0.5" style={{fontVariationSettings: "'FILL' 1"}}>close</span>
+                          )}
+                          <span className={`text-xs leading-relaxed ${item.included ? 'text-zinc-300' : 'text-zinc-500'}`}>{item.text}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
                   
                   <div className="p-4 mt-auto">
-                    <Link to="/contact" className={`w-full py-3 rounded-xl font-bold uppercase tracking-widest text-[10px] flex items-center justify-center transition-all ${isTop ? 'bg-primary-container text-white hover:bg-red-700' : 'bg-white/10 text-white hover:bg-white hover:text-black'}`}>
-                      Select Plan
-                    </Link>
+                    <a href="https://gkautobook.cloud/login" target="_blank" rel="noopener noreferrer" className={`w-full py-3 rounded-xl font-bold uppercase tracking-widest text-[10px] flex items-center justify-center transition-all ${isTop ? 'bg-primary-container text-white hover:bg-red-700' : 'bg-white/10 text-white hover:bg-white hover:text-black'}`}>
+                      Book Now
+                    </a>
                   </div>
                 </motion.div>
               )
@@ -579,7 +637,7 @@ export default function PackagesPage() {
             <h2 className="text-4xl md:text-5xl font-headline font-black uppercase tracking-tighter mb-6 text-white min-h-[120px]">Need a Custom <br /><span className="text-primary-container">Configuration?</span></h2>
             <p className="text-zinc-400 mb-10 text-lg leading-relaxed max-w-xl">Our specialist team can build a completely bespoke maintenance and protection package tailored perfectly to your vehicle's specific needs and storage conditions.</p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link to="/contact" className="bg-primary-container text-white px-10 py-4 rounded-full font-black uppercase text-xs tracking-widest hover:bg-red-700 transition-all text-center shadow-lg">Consult Expert</Link>
+              <a href="https://gkautobook.cloud/login" target="_blank" rel="noopener noreferrer" className="bg-primary-container text-white px-10 py-4 rounded-full font-black uppercase text-xs tracking-widest hover:bg-red-700 transition-all text-center shadow-lg">Book Now</a>
             </div>
           </div>
           <div className="lg:col-span-5 relative min-h-[400px] lg:min-h-full">

@@ -72,10 +72,10 @@ export default function ContactPage() {
               
               <div className="h-px w-full bg-white/5"></div>
               
-              <div className="flex items-center gap-4 group/email cursor-pointer">
+              <a href="mailto:gkautoherb@gmail.com" className="flex items-center gap-4 group/email cursor-pointer">
                 <span className="material-symbols-outlined text-primary-container text-2xl" style={{fontVariationSettings: "'FILL' 1"}}>mail</span>
-                <p className="text-white font-bold tracking-wider group-hover/email:text-primary-container transition-colors">concierge@gkautoherb.com</p>
-              </div>
+                <p className="text-white font-bold tracking-wider group-hover/email:text-primary-container transition-colors">gkautoherb@gmail.com</p>
+              </a>
             </div>
           </motion.div>
 
