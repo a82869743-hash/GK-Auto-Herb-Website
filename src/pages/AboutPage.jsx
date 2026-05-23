@@ -101,7 +101,7 @@ export default function AboutPage() {
               </motion.p>
 
               <motion.p variants={fadeInUp} className="text-base md:text-lg text-zinc-500 max-w-xl font-light leading-relaxed mb-12">
-                Founded by <span className="text-white font-medium">Gaurav Kumar</span>, we specialize in advanced solutions like 9H ceramic coating and paint protection films. Driven by precision, powered by expertise — we redefine automotive care.
+                Founded by <span className="text-white font-medium">Gaurav Kathuria</span>, we specialize in advanced solutions like 9H ceramic coating and paint protection films. Driven by precision, powered by expertise — we redefine automotive care.
               </motion.p>
 
               {/* Stats Row */}
@@ -168,7 +168,7 @@ export default function AboutPage() {
                 <div className="relative overflow-hidden rounded-3xl border border-white/10 group-hover:border-primary-container/30 transition-all duration-700">
                   <img
                     src="/assets/founder_gaurav_kumar_branded.png"
-                    alt="Gaurav Kumar — Founder of GK Auto Herb"
+                    alt="Gaurav Kathuria — Founder of GK Auto Herb"
                     className="w-full h-[500px] md:h-[650px] object-cover object-top transition-transform duration-1000 group-hover:scale-[1.03]"
                   />
                   {/* Overlay Gradient */}
@@ -179,7 +179,7 @@ export default function AboutPage() {
                       <div className="w-8 h-px bg-primary-container"></div>
                       <span className="text-primary-container font-bold text-[10px] tracking-[0.3em] uppercase">Founder & Visionary</span>
                     </div>
-                    <h3 className="text-3xl md:text-4xl font-headline font-black text-white uppercase tracking-tight">Gaurav Kumar</h3>
+                    <h3 className="text-3xl md:text-4xl font-headline font-black text-white uppercase tracking-tight">Gaurav Kathuria</h3>
                   </div>
                 </div>
 
@@ -214,7 +214,7 @@ export default function AboutPage() {
                 <footer className="mt-6 pl-8 flex items-center gap-4">
                   <div className="w-10 h-px bg-zinc-700"></div>
                   <div>
-                    <cite className="text-white font-headline font-bold text-sm not-italic tracking-wide uppercase">Gaurav Kumar</cite>
+                    <cite className="text-white font-headline font-bold text-sm not-italic tracking-wide uppercase">Gaurav Kathuria</cite>
                     <p className="text-primary-container text-[10px] font-bold tracking-[0.2em] uppercase mt-1">Founder, GK Auto Herb</p>
                   </div>
                 </footer>
@@ -436,13 +436,15 @@ export default function AboutPage() {
                 <p className="text-zinc-400 text-sm font-light leading-relaxed mb-4">
                   Ready to transform your vehicle?
                 </p>
-                <Link
-                  to="/contact"
+                <a
+                  href="https://gkautobook.cloud/login"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-primary-container/10 border border-primary-container/30 text-primary-container font-bold text-xs uppercase tracking-wider px-6 py-3 rounded-full hover:bg-primary-container hover:text-white transition-all duration-300"
                 >
                   <span className="material-symbols-outlined text-base">calendar_month</span>
                   Book Now
-                </Link>
+                </a>
               </div>
             </motion.div>
           </motion.div>
@@ -469,13 +471,15 @@ export default function AboutPage() {
             Visit our studio in New Alkapuri, Vadodara, and discover why GK Auto Herb is the region's most trusted name in automotive detailing.
           </motion.p>
           <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row items-center justify-center gap-5">
-            <Link
-              to="/contact"
+            <a
+              href="https://gkautobook.cloud/login"
+              target="_blank"
+              rel="noopener noreferrer"
               className="group inline-flex items-center gap-3 bg-primary-container hover:bg-white text-white hover:text-black font-headline font-bold uppercase tracking-widest text-xs px-10 py-4 rounded-full transition-all duration-300 hover:shadow-xl"
             >
               Contact Us
               <span className="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">arrow_forward</span>
-            </Link>
+            </a>
             <Link
               to="/services"
               className="group inline-flex items-center gap-3 border border-white/20 hover:border-white/60 text-white font-headline font-bold uppercase tracking-widest text-xs px-10 py-4 rounded-full transition-all duration-300"

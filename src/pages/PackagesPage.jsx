@@ -121,7 +121,7 @@ const annualCareData = [
     comps: [
       { text: '2 Car Foam Wash', included: true },
       { text: '2 Body Wax Coat', included: true },
-      { text: 'Two Wheeler Wash', included: false },
+      { text: 'Two Wheeler Wash', included: true },
       { text: 'Two Wheeler Wax Coat', included: false },
       { text: 'Body Hybrid Ceramic Wax Coat', included: false },
       { text: 'Deep Cleaning', included: false },
